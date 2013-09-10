@@ -7,6 +7,10 @@
     <meta name="description" content="Tasklist : tasklist" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    ////////
+        <script type="text/javascript" src="javascripts/mywebpagejs.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/cssStuff.css">
+    ///////
 
     <title>Tasklist</title>
   </head>
@@ -33,6 +37,29 @@
       <section id="main_content" class="inner">
         <h3>
 <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+
+/////////////
+    <form name = "myFormName"id = "myForm">
+    <label for="form1">Add Task: </label><input type="text" name="inputbox1" id = "form1">
+    <input type="button" value="Submit" onClick=submitInfo()><br>
+    <div id = "tasks">
+    </div>
+    <div id="clear">
+      <input type="button" value="Clear Done" onClick=clearDone()><br>
+    </div>
+    <div id = "done">
+    </div>
+
+    </form>
+    ////////////
+
+
+
+
+
+
+
 
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
