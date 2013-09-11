@@ -1,15 +1,15 @@
 		var formLength = 0;
 		var doneText = "Done items:\n";
-		var itemArrStore = [];
-		if(localStorage.itemArr){
-			itemArrStore = localStorage.itemArr.split(",");
-		}
+	
 		function submitInfo(){
-			//get location of div to place items
-			var taskDiv = document.getElementById("tasks");
 			//identifys text in submit box
 			var formContents = document.getElementById("form1").value;
-			//create Div for each item
+			localStorage[formContents] = false;
+			addToList(formContents,false);
+		}
+		function addToList(task,value){
+			//get location of div to place items
+			var taskDiv = document.getElementById("tasks");
 			var itemDiv = document.createElement('div');
 			taskDiv.appendChild(itemDiv);
 			//creates tickboxs
@@ -17,19 +17,30 @@
 			input.type = "checkbox";
 			input.id = "box" + formLength;
 			input.className = "css-checkbox";
+			//input.checked = value;
+
 			//increments formLength for ID calculation
-			formLength += 1;
+			
 			itemDiv.appendChild(input);
+			//doesnt work!!!
+			document.getElementById("box"+formLength).addEventListener("change",console.log("hello"))
+			formLength += 1;
 			//creates tickbox text
 			var itemText = document.createElement ('label');
 			itemText.htmlFor = input.id;
-			itemText.innerText = formContents;
+			itemText.innerText = task;
 			itemText.className = "css-label";
-			itemDiv.appendChild(itemText); 
+			itemDiv.appendChild(itemText);
+			if (value=="true"){input.checked = true}
 			//clearsbox
 			document.getElementById("form1").value="";
-			itemArrStore.push(formContents);
-			localStorage.itemArr = itemArrStore;
+
+		}
+		function loadItems(){
+			for (x in localStorage){
+				addToList(x,localStorage[x]);
+			}
+
 		}
 
 		function clearDone(){
@@ -47,6 +58,7 @@
 			doneBox.innerText = doneText;
 
 		}
+	
 		
 		function storeOpenTasks(){
 			TODO
