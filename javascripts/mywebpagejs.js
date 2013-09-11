@@ -1,5 +1,9 @@
 		var formLength = 0;
 		var doneText = "Done items:\n";
+		var itemArrStore = [];
+		if(localStorage.itemArr){
+			itemArrStore = localStorage.itemArr.split(",");
+		}
 		function submitInfo(){
 			//get location of div to place items
 			var taskDiv = document.getElementById("tasks");
@@ -24,6 +28,8 @@
 			itemDiv.appendChild(itemText); 
 			//clearsbox
 			document.getElementById("form1").value="";
+			itemArrStore.push(formContents);
+			localStorage.itemArr = itemArrStore;
 		}
 
 		function clearDone(){
@@ -40,4 +46,11 @@
 			}
 			doneBox.innerText = doneText;
 
+		}
+		
+		function storeOpenTasks(){
+			TODO
+		}
+		function storeDoneTasks(){
+			TODO
 		}
