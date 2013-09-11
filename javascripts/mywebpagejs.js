@@ -23,7 +23,7 @@
 			
 			itemDiv.appendChild(input);
 			//doesnt work!!!
-			document.getElementById("box"+formLength).addEventListener("change",console.log("hello"))
+			document.getElementById("box"+formLength).addEventListener("change",function(){console.log("hello")});
 			formLength += 1;
 			//creates tickbox text
 			var itemText = document.createElement ('label');
