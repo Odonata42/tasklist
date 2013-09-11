@@ -37,7 +37,7 @@
 
 		}
 		function loadItems(){
-			for (x in localStorage){
+			for (var x in localStorage){
 				addToList(x,localStorage[x]);
 			}
 
