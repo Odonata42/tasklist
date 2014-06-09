@@ -50,8 +50,10 @@
 			var tickBoxes = document.getElementsByClassName("css-checkbox");
 			for (var i=0;i<items.length;i++){
 				if(tickBoxes[i].checked==true){
+	
 					doneText += items[i].innerHTML + "\n"
 					items[i].parentNode.remove();
+					delete localStorage[items[i].innerHTML]
 					i--;
 				}
 			}
