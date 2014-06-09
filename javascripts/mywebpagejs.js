@@ -52,8 +52,8 @@
 				if(tickBoxes[i].checked==true){
 	
 					doneText += items[i].innerHTML + "\n"
-					items[i].parentNode.remove();
 					delete localStorage[items[i].innerHTML]
+					items[i].parentNode.remove();
 					i--;
 				}
 			}
