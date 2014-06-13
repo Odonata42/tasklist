@@ -5,12 +5,12 @@ margin:auto;
 position:relative;
 width:550px;
 height:450px;
-font-family: calibri, Geneva, sans-serif;
+font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
 font-size: 16px;
 font-style: italic;
 line-height: 24px;
 font-weight: bold;
-color: #09C;
+color: #373737;
 text-decoration: none;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
@@ -55,7 +55,11 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 .css-label{ 
 	background-image:url(http://csscheckbox.com/checkboxes/dark-check-orange.png); 
 }
+input[type=button]{
 
+	color:#007edf;
+	background-color:#373737;
+}
 
 
 
