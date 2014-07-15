@@ -143,8 +143,8 @@ img {
   position: relative;
   margin: 0 auto;
   max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
+  padding-right: 5px;
+  /*margin: 10px 0 10px 0;
   border: 1px solid #ebebeb;
 
   box-shadow: 0 0 5px #ebebeb;
@@ -152,6 +152,7 @@ img {
   -moz-box-shadow: 0 0 5px #ebebeb;
   -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
+  */
 }
 
 pre, code {
@@ -165,9 +166,6 @@ pre, code {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-
-
-
 }
 
 pre {
@@ -298,7 +296,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 50px 10px 30px 150px;
 }
 
 #project_title {
@@ -386,6 +384,7 @@ Small Device Styles
   }
 
   .inner {
+    margin-left: 20px;
     min-width: 320px;
     max-width: 480px;
   }
@@ -425,3 +424,78 @@ Small Device Styles
   }
 
 }
+
+
+form    {
+background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+margin:auto;
+position:relative;
+width:550px;
+height:450px;
+font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+font-size: 16px;
+font-style: italic;
+line-height: 24px;
+font-weight: bold;
+color: #373737;
+text-decoration: none;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:10px;
+border: 1px solid #999;
+border: inset 1px solid #333;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+input[type=checkbox].css-checkbox { 
+  position: absolute;
+  overflow: hidden;  
+  clip: rect(0 0 0 0);  
+  height:1px;  
+  width:1px;  
+  margin:-1px;  
+  padding:0; 
+  border:0; 
+}  
+
+input[type=checkbox].css-checkbox + label.css-label { 
+  padding-left:20px; 
+  height:15px;  
+  display:inline-block; 
+  line-height:15px; 
+  background-repeat:no-repeat; 
+  background-position: 0 0; 
+  font-size:15px; 
+  vertical-align:middle; 
+  cursor:pointer; 
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label { 
+    background-position: 0 -15px; 
+    text-decoration:line-through;
+    font-weight:900;
+} 
+
+.css-label{ 
+  background-image:url(http://csscheckbox.com/checkboxes/dark-check-orange.png); 
+}
+
+input[type=button]{
+  color:#007edf;
+  background-color:#373737;
+}
+
+img.portrait {
+  border-radius: 45px;
+  height: 100px;
+  width: 100px;
+  margin-top: 50px;
+  margin-left: 20px;
+  position: absolute;
+}
+
+

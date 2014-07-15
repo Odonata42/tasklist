@@ -61,5 +61,10 @@ input[type=button]{
 	background-color:#373737;
 }
 
-
+img.portrait {
+  border-radius: 45px;
+  margin-top: 50px;
+  margin-left: 20px;
+  position: absolute;
+}
 
