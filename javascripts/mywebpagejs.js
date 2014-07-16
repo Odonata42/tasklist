@@ -32,17 +32,21 @@ function loadItems(){
 function submitInfo(){
 			//identifys text in submit box and adds to local storage
 	var formContents = document.getElementById("form1").value;
-	var priority=0
-	if(localStorage.length>0){
-		priority = getlocal().length;
-	}
+	var priority=0;
+	//if(localStorage.length>0){
+	//	priority = getlocal().length;
+	//}
 	var info ={priority: priority,
 			label:formContents,
 			value:"false"};
 	//localStorage.priority = {}
 
 	items = getlocal();
-	items.push(info);
+	items.unshift(info);
+
+	for (var i=1;i<items.length;i++){
+		items[i].priority = items[i].priority +1;
+	}
 			//local storage only supports string so convert..
 			//..Array and JSON to string		
 	localStorage.items = JSON.stringify(items);	
