@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+
+  "name": "Tasklist",
+  "description": "This extension allows a task list to be built",
+  "version": "1.0",
+
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  }
+}
